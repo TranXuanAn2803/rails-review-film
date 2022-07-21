@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Films</h1>
+<%= button_to "Login", '/login', method: :get%>
+<%= button_to "Sign Up", '/users/new', method: :get%>
+<div id="films">
+  <% @films.each do |film| %>
+    <h2 style="color:blue"> Film</h2>
+    <%= render film %>
+
+    <p>
+      <%= link_to "Show this film", film %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New film", new_film_path %>

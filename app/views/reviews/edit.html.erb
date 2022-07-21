@@ -1,0 +1,12 @@
+<h1>Editing review</h1>
+<h3 style="color:blue"> Film</h3>
+<%= render "films/film", film: @film %>
+<h3 style="color:blue"> Review</h3>
+
+<%= render "form", review: @review %>
+<br>
+
+<div>
+  <%= link_to "Show this review", @review %> |
+  <%= link_to "Back to film", film_path(@film)%>
+</div>

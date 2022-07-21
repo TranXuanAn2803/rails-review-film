@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+<h3 style="color:blue"> Film</h3>
+<%= render "films/film", film: @film %>
+<h3 style="color:blue"> Review</h3>
+
+<%= render @review %>
+
+<div>
+  <%= link_to "Edit this review", edit_review_path(@review) %> |
+  <%= link_to "Back to film", film_path(@film) %>
+
+  <%= button_to "Destroy this review", @review, method: :delete %>
+</div>
